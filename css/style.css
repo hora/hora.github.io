@@ -1,0 +1,24 @@
+body {
+  background-color: #14213d;
+  color: #e5e5e5;
+
+  font-family: 'Open Sans', Helvetica, sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+strong {
+  color: #fca311;
+}
+
+.container {
+  width: 800px;
+}
+
+header {
+  margin-top: 70px;
+
+  display: flex;
+}
