@@ -19,6 +19,19 @@ strong {
 
 header {
   margin-top: 70px;
+}
 
+header h2 span {
+  display: block;
+}
+
+.header-content {
   display: flex;
 }
+
+header img {
+  border-radius: 5px;
+  height: 150px;
+  box-shadow: #000 1px 1px;
+}
+
