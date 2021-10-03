@@ -1,6 +1,6 @@
 body {
-  background-color: #14213d;
-  color: #e5e5e5;
+  background-color: #fdfdff;
+  color: #000;
 
   font-family: 'Open Sans', Helvetica, sans-serif;
 
@@ -10,7 +10,13 @@ body {
 }
 
 strong {
-  color: #fca311;
+  color: #ef626c;
+}
+
+a,
+a:visited {
+  color: #087e8b;
+  text-decoration: none;
 }
 
 .container {
@@ -29,9 +35,17 @@ header h2 span {
   display: flex;
 }
 
-header img {
+header .profile {
   border-radius: 5px;
   height: 150px;
   box-shadow: #000 1px 1px;
+}
+
+.nav {
+  list-style-type: none;
+}
+
+.nav li {
+  display: inline;
 }
 
