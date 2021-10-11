@@ -42,6 +42,21 @@ header {
   margin: 70px 10px 0;
 }
 
+header p {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+@media (max-width: 420px) {
+  header h2 {
+    font-size: 18px;
+  }
+
+  header p {
+    font-size: 14px;
+  }
+}
+
 @media (max-width: 799px) {
   .container {
     width: 100%;
@@ -64,11 +79,6 @@ header .profile {
   border-radius: 5px;
   height: 150px;
   box-shadow: #000 1px 1px;
-}
-
-header p {
-  font-weight: bold;
-  font-size: 18px;
 }
 
 .nav {
@@ -120,6 +130,7 @@ header p {
   list-style-type: none;
   font-size: 18px;
   padding: 0 20px;
+  text-align: center;
 }
 
 .student-callin ul li {
@@ -156,8 +167,10 @@ header p {
   }
 }
 
-.quote {
-  width: 400px;
+@media (min-width: 800px) {
+  .quote {
+    width: 400px;
+  }
 }
 
 .quote blockquote {
