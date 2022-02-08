@@ -80,6 +80,13 @@ header p {
   margin-right: 60px;
 }
 
+@media (max-width: 420px) {
+  .header-content__right {
+    margin-right: 30px;
+    margin-top: 15px;
+  }
+}
+
 @media (min-width: 800px) {
   .header-content__left {
     margin-left: 120px;
