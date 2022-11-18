@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Assignments – Recipe Website</title>
+  <!--<meta name="description" content="">-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/parsons.css">
+  <link rel="stylesheet" href="../assets/scripts/js-parsons/prettify.css">
+  <script src="../assets/scripts/js-parsons/prettify.js"></script>
+
+</head>
+
+<body>
+  <div class="container">
+
+    <main>
+      <h2>HTML skeleton</h2>
+
+      <p>
+        Build a typical HTML skeleton by dragging and dropping the lines of HTML
+        code from the left to the right. Indentation matters!
+      </p>
+
+      <div id="sortableTrash" class="sortable-code"></div>
+      <div id="sortable" class="sortable-code"></div>
+      <div style="clear:both;"></div>
+
+      <p>
+          <a href="#" id="feedbackLink">Submit and Get Feedback</a>
+      </p>
+
+      <script src="../assets/scripts/js-parsons/jquery.min.js"></script>
+      <script src="../assets/scripts/js-parsons/jquery-ui.min.js"></script>
+      <script src="../assets/scripts/js-parsons/jquery.ui.touch-punch.min.js"></script>
+      <script src="../assets/scripts/js-parsons/underscore-min.js"></script>
+      <script src="../assets/scripts/js-parsons/lis.js"></script>
+      <script src="../assets/scripts/js-parsons/parsons.js"></script>
+      <script>
+        var initial = '&lt;html&gt;\n' +
+                      '  &lt;head&gt;\n' +
+                      '  &lt;/head&gt;\n' +
+                      '  &lt;body&gt;\n' +
+                      '  &lt;header&gt;\n' +
+                      '  &lt;/header&gt;\n' +
+                      '  &lt;main&gt;\n' +
+                      '  &lt;/main&gt;\n' +
+                      '  &lt;footer&gt;\n' +
+                      '  &lt;/footer&gt;\n' +
+                      '  &lt;/body&gt;\n' +
+                      '&lt;/html&gt;\n';
+
+      function displayErrors(fb) {
+          if(fb.errors.length > 0) {
+              alert(fb.errors[0]);
+          }
+      }
+
+      $(document).ready(function(){
+          var parson = new ParsonsWidget({
+              'sortableId': 'sortable',
+              'trashId': 'sortableTrash',
+              'max_wrong_lines': 0,
+              'feedback_cb' : displayErrors
+          });
+          parson.init(initial);
+          parson.shuffleLines();
+          $("#newInstanceLink").click(function(event){
+              event.preventDefault();
+              parson.shuffleLines();
+          });
+          $("#feedbackLink").click(function(event){
+              event.preventDefault();
+              parson.getFeedback();
+          });
+      });
+      </script>
+    </main>
+
+  </div> <!-- .container -->
+</body>
+
+</html>
+
